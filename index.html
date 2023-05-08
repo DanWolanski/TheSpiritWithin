@@ -507,7 +507,7 @@ As you head deeper into the forest you start to feel like you are being watched.
 
 (if:$itemchoice is &quot;knife&quot;)[ Pull out your knife and turn to [[Fight]] the beast]
 (else-if:$itemchoice is &quot;cloak&quot;)[ Use your cloak to blend in with the forest to [[Hide]] from the beast]
-(else:)[ Having no tool for the job you can]
+(else:)[ Having no tool for the job you can use to escape, so your two options are]
 [[Lose]] the beast by running fast as you can to the river and hoping to either out run the beast or have it lose the sent in the river
 [[Confront]] the animal and have trust in the spirits that are protecting you
 </tw-passagedata><tw-passagedata pid="49" name="Fight" tags="" position="2000,500" size="100,100">&lt;img src=&quot;https://uc6dd7668ee141a9f55e098b4ed8.previews.dropboxusercontent.com/p/thumb/AB4RfotgY8z-I38aqSQAVe2KPRUp8ZHrgVK4xPnwNf-qtWQwvWSOMx8jgf8kA9jH-LEJuwWJIC-nqXhAqdV7E4Dra7MZKjkLwiaLN7Zls61a-9YE7bOM_HYIXMlH3cFXfkF3KKbQnUm7fmd7rWkdvVSvfqVN99ITyjMx9kgadp_9u9QW8I06JF3q3oseTOKXbsP3qtyczzHMLJhmuc08WCdXZN0M_LIo4BsMyL3p4ryhpsYFJQKPyFFQAwg20CodAIZxFnAhPs-8OJ3ogktBaZpgSYAc87kOOkWSJ9RxfnRaZ-goa8fli1sP2Jj61ZLzjH5FUBybhjJoFGz4fVlbpPU7PqvZKgSvW1-TEVXu-WgX0u2FCoCrc9R6JKm9T4R4RRWGCbBF_4E0WESNztxWZVUME96jxMgUAjaKYIFRi_ub3A/p.jpeg&quot;&gt;
@@ -571,6 +571,7 @@ You pull the arrow from the beast, and a gush of blood comes out with it.  The b
 ]</tw-passagedata><tw-passagedata pid="54" name="Continue" tags="" position="1950,1025" size="100,100">&lt;img src=&quot;https://uc64e240bc051013117fc0ed6497.previews.dropboxusercontent.com/p/thumb/AB6PH4IXlVAVuLxtgFise5inPl2Xir7MVqUfXPanUIv8e7qowg7HMATYmAskA5P9u2f0Xxr-MIyyomozuaeLUJyhooCh4Vq9qVcnjMJQ_HL5W6_OSFf_0MFpNNrP1NiE6O4UeP1xkxAtYzyIyWCnEkDsQGRWF-pfRGxGlgsKJgwpVcvs4pTQTz-nersanAc_9uKCScTu9GExPxDK7QNIcxwEclLSImxvu29Kudd07QejB4sYka5BzxFPdjg--dRFJfD603E2ebSOW3U38_RaBZkHqAUTJ-76WntlMhXmzM2UhRJQlmsYTDqGahyTC4EKW_lUJrxWM64KUBKrdjWCD2feqSEMASYt7ei2-0FohHXpKUuSXsn-QbI32strNKmOOLPxvOJL98keW-F1l3ymFDlRDISU9ISH8XED5VixIFpEow/p.jpeg&quot;&gt;
 {(set: $random to (random: 1,4))}
 (if:$random is 1)[As you continue to walk inside the forest you stumble on a [[small game trail]] ]
+(else-if:$random is &gt;= 3)[ [[ Climb a tree ]] to see if you can spot any landmarks]
 (else:)[
 You continue your journey deeper into the forest but are having a hard time judging distance inside the vast labyrinth {
 (set: $bear to $bear + (random:-1,1))
@@ -579,10 +580,9 @@ You continue your journey deeper into the forest but are having a hard time judg
 (set: $deer to $deer + (random:-1,1) )
 (set: $raven to $raven + -1 )
 (set: $fox to $fox + (random:-1,2))}
-(else-if:$random is &gt;= 3)[[[ Climb a tree ]] to see if you can spot any landmarks]
 (if:$itemchoice is &quot;compass&quot;)[ Use your compase to Get [[ Back on Track]] ]
 
-[[Continue]] heading deeper into the forest, you know it should be here soon
+[[Continue]] heading deeper into the forest, you know it should be there soon
 ]</tw-passagedata><tw-passagedata pid="55" name="Heal" tags="" position="1675,700" size="100,100">&lt;img src=&quot;https://ucba81f95785d9308b931a0fcb2c.previews.dropboxusercontent.com/p/thumb/AB50MlA3leJNjnUCP454UesoXjiQCXCYUX4DWGsoTUZtUDxsgod5qORwb8RwtFXJSARdSpdA9_7ZnhXQ0Vw925GpbAtyY4ur3e5wPYf5ikj0dH1S6iwVHE6W1I9YotutuyWyhMD50jGa93Ja5oDQgoTMm2FkM8NFH_V0BlSZf_ucmj5JgJroBenzYzNaBX12DQXSTMFH5PAtvy1XQRYaJzoxF_HLn9Jc5gr3RQidTAOcZ4Wew321H0T8bRqQ1KmFoLScwrK6NQ55qrWBVfv_BnrJj-8p1YgdY_79jXI2XCmeyHzF9GTp_cVP_u7F2_pR_yPZrQYo3n_YGZVqX9aTZLK1JF_3FNuS8jpSTc5ahc75z2KPd2nUin3gIJ21iZRs9YCw586m1RfqT-_54VpuruqLNxL48M2cQOnXhoYskz2s8w/p.jpeg&quot;&gt;
 {(set: $bear to $bear + 1)
 (set: $squirrel to $squirrel + 0)
@@ -643,7 +643,7 @@ You tie the rope to the tallest branch you can find.  You grab onto the rope and
 You carefully but quickly start making your way accross the rope bridge.  The bridge seems like it is holding up fine.  When you reach the halfway point it begins to creak loudly and you hear popping sounds coming from both sides.  
 {(set: $random to (random: 1,3))}
 (if:$random is 1)[ You feel the rope start to go slack as first one rope snaps then the other.  You quickly react by making the [[Jump]] into the water below]
-(else:)[Dispite the creaking and groaning, you make it to the other side.  After, stopping for a quick second to gather yourself you [[Continue]] back on your path] </tw-passagedata><tw-passagedata pid="61" name="[ Climb a tree " tags="" position="1950,1150" size="100,100"></tw-passagedata></tw-storydata>
+(else:)[Dispite the creaking and groaning, you make it to the other side.  After, stopping for a quick second to gather yourself you [[Continue]] back on your path] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
